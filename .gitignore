@@ -1,6 +1,35 @@
-CLAUDE.md
-_source
 node_modules
 dist
 .slidev-cache
 .DS_Store
+package-lock.json
+
+# Skip all media/images for now — re-enable when finalised
+_source/extracted/assets/
+shared/assets/
+
+# Generated artefacts
+_source/extracted/_master-slidev.md
+_source/extracted/_classify.log
+_source/extracted/_image_manifest.json
+_source/extracted/_rename_proposals.json
+_source/extracted/_manual_review.md
+_source/extracted/_unsorted*.md
+_source/extracted/_collisions/
+_source/extracted/_resized/
+
+# Auto-generated topic files (regenerated from split_content.py)
+content/
+
+# Misc
+*.png
+*.jpg
+*.jpeg
+*.mov
+*.mp4
+
+# Source pptx files (large) and Python caches
+*.pptx
+~$*
+__pycache__/
+*.pyc

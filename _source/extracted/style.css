@@ -1,0 +1,107 @@
+/* === Manrope spec === */
+
+:root {
+  --c-primary: #121212;
+  --c-body: #444444;
+  --c-heading: #040404;
+  --c-muted: #717171;
+  --c-bg: #FFFFFF;
+  --c-border: #EAEAEA;
+  --c-surface: #EEF2F9;
+}
+
+.dark {
+  --c-primary: #FFFFFF;
+  --c-body: #B4AFB6;
+  --c-heading: #FFFFFF;
+  --c-muted: #888888;
+  --c-bg: #1C1C1C;
+  --c-border: #3E3E3E;
+  --c-surface: #222222;
+}
+
+/* Base typography */
+.slidev-layout {
+  font-family: 'Manrope', sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--c-body);
+  font-weight: 400;
+  /* Reserve bottom space for the logo pill — no content should overlap */
+  --bottom-reserved: 72px;
+}
+
+/* Headings — Manrope 700, tight tracking & line-height */
+.slidev-layout h1,
+.slidev-layout h2,
+.slidev-layout h3,
+.slidev-layout h4 {
+  font-family: 'Manrope', sans-serif;
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: -0.01em;
+  color: var(--c-heading);
+}
+
+/* Section subtitles / kickers — Manrope 600 */
+.slidev-layout h5,
+.slidev-layout h6 {
+  font-family: 'Manrope', sans-serif;
+  font-weight: 600;
+  line-height: 1.25;
+  color: var(--c-heading);
+}
+
+/* Modular scale 1.18 — h1 → h6 */
+.slidev-layout h1 { font-size: 44px; }
+.slidev-layout h2 { font-size: 38px; }
+.slidev-layout h3 { font-size: 32px; }
+.slidev-layout h4 { font-size: 26px; }
+.slidev-layout h5 { font-size: 22px; }
+.slidev-layout h6 { font-size: 18px; }
+
+/* Body */
+.slidev-layout p,
+.slidev-layout li {
+  font-size: 20px;
+  line-height: 1.55;
+  font-weight: 400;
+}
+
+/* Markdown images in two-cols layout — fill column whether on left or right */
+.slidev-layout.two-cols img,
+.slidev-layout .col-left img,
+.slidev-layout .col-right img {
+  width: 100%;
+  height: auto;
+  max-height: 70vh;
+  object-fit: contain;
+}
+
+/* Two-cols: vertically centre column content (less top-heavy) */
+.slidev-layout.two-cols .col-left,
+.slidev-layout.two-cols .col-right {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+}
+
+/* image-left / image-right: anchor image to outer edge so the inner side gets cropped */
+.image-left div[style*="background-image"] {
+  background-position: left center !important;
+}
+.image-right div[style*="background-image"] {
+  background-position: right center !important;
+}
+
+/* Big numbers / large quotes — Manrope 300 */
+.slidev-layout .display,
+.slidev-layout blockquote {
+  font-weight: 300;
+}
+
+/* Muted accent text */
+.slidev-layout .muted {
+  color: var(--c-muted);
+}
