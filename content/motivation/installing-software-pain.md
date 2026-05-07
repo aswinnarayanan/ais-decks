@@ -44,120 +44,34 @@ imaging instrument?
 
 - Discussion & outlook
 
-![](./assets/sydney-s07-installing-and-maintaining-scientific-so-img1.png)
+![](./assets/icons/icon-laptop.png)
 
-![](./assets/sydney-s07-installing-and-maintaining-scientific-so-img2.png)
+![](./assets/icons/icon-desktop-computer-tower.png)
 
-![](./assets/sydney-s07-installing-and-maintaining-scientific-so-img3.png)
+![](./assets/icons/icon-cloud-computer.png)
 
-![](./assets/sydney-s07-installing-and-maintaining-scientific-so-img4.png)
+![](./assets/icons/server-rack-laptop-terminal.png)
 
-![](./assets/sydney-s07-installing-and-maintaining-scientific-so-img5.png)
+![](./assets/screenshots/fsl-fmri-analysis-screenshot.png)
 
-![](./assets/sydney-s07-installing-and-maintaining-scientific-so-img6.jpeg)
+![](./assets/logos/mrtrix3-logo.jpeg)
 
-![](./assets/sydney-s07-installing-and-maintaining-scientific-so-img7.jpeg)
+![](./assets/figures/ants-brain-normalization.jpeg)
 
-![](./assets/sydney-s07-installing-and-maintaining-scientific-so-img8.png)
+![](./assets/screenshots/bart-toolbox-mri-code-banner.png)
 
-![](./assets/sydney-s07-installing-and-maintaining-scientific-so-img9.png)
+![](./assets/logos/spinal-cord-toolbox-logo.png)
 
-![](./assets/sydney-s07-installing-and-maintaining-scientific-so-img10.png)
+![](./assets/logos/afni-logo.png)
 
-![](./assets/sydney-s07-installing-and-maintaining-scientific-so-img11.png)
+![](./assets/logos/julia-logo.png)
 
-![](./assets/sydney-s07-installing-and-maintaining-scientific-so-img12.png)
+![](./assets/logos/freesurfer-logo.png)
 
-![](./assets/sydney-s07-installing-and-maintaining-scientific-so-img13.png)
+![](./assets/logos/python-logo-2.png)
 
-![](./assets/sydney-s07-installing-and-maintaining-scientific-so-img14.png)
+![](./assets/logos/itk-snap-logo.png)
 
-![](./assets/sydney-s07-installing-and-maintaining-scientific-so-img15.png)
+![](./assets/logos/logo-partition-magic.png)
 
-![](./assets/sydney-s07-installing-and-maintaining-scientific-so-img16.png)
-
-<!-- ===== sciget slide 6 ===== -->
-## Installing and maintaining scientific software is not fun …
-
-6
-
-
-… on your
-
-notebook?
-
-
-… on your lab workstation?
-
-
-… on a cloud
-
-provider?
-
-
-… on a high
-
-performance cluster?
-
-
-… on a secure environment?
-
-
-- ?
-
-… on an
-
-imaging instrument?
-
-
-- The problems
-
-- Existing solutions
-
-- What's needed
-
-- Proposed architecture
-
-- Discussion & outlook
-
-![](./assets/sciget-s06-installing-and-maintaining-scientific-so-img1.png)
-
-![](./assets/sciget-s06-installing-and-maintaining-scientific-so-img2.png)
-
-![](./assets/sciget-s06-installing-and-maintaining-scientific-so-img3.png)
-
-![](./assets/sciget-s06-installing-and-maintaining-scientific-so-img4.png)
-
-![](./assets/sciget-s06-installing-and-maintaining-scientific-so-img5.png)
-
-![](./assets/sciget-s06-installing-and-maintaining-scientific-so-img6.png)
-
-![](./assets/sciget-s06-installing-and-maintaining-scientific-so-img6.png)
-
-![](./assets/sciget-s06-installing-and-maintaining-scientific-so-img8.png)
-
-![](./assets/sciget-s06-installing-and-maintaining-scientific-so-img8.png)
-
-![](./assets/sciget-s06-installing-and-maintaining-scientific-so-img10.png)
-
-![](./assets/sciget-s06-installing-and-maintaining-scientific-so-img11.jpeg)
-
-![](./assets/sciget-s06-installing-and-maintaining-scientific-so-img12.jpeg)
-
-![](./assets/sciget-s06-installing-and-maintaining-scientific-so-img13.png)
-
-![](./assets/sciget-s06-installing-and-maintaining-scientific-so-img14.png)
-
-![](./assets/sciget-s06-installing-and-maintaining-scientific-so-img15.png)
-
-![](./assets/sciget-s06-installing-and-maintaining-scientific-so-img16.png)
-
-![](./assets/sciget-s06-installing-and-maintaining-scientific-so-img17.png)
-
-![](./assets/sciget-s06-installing-and-maintaining-scientific-so-img18.png)
-
-![](./assets/sciget-s06-installing-and-maintaining-scientific-so-img19.png)
-
-![](./assets/sciget-s06-installing-and-maintaining-scientific-so-img20.png)
-
-![](./assets/sciget-s06-installing-and-maintaining-scientific-so-img21.png)
+![](./assets/icons/icon-ct-mri-scanner.png)

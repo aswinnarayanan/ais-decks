@@ -13,4 +13,6 @@ National Imaging Facility
 3
 
 
-![](./assets/sydney-s03-neurodesk-overview-img1.jpeg)
+![](./assets/logos/nif-logo.svg)
+
+![](./assets/logos/uq-logo.svg)

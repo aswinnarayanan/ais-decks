@@ -23,6 +23,6 @@
 
 - Discussion & outlook
 
-![](./assets/sydney-s18-foundational-digital-research-infrastruc-img1.png)
+![](./assets/logos/ncris-national-research-infrastructure-logo.png)
 
-![](./assets/sydney-s18-foundational-digital-research-infrastruc-img2.png)
+![](./assets/logos/ais-logo.png)

@@ -19,101 +19,42 @@
 
 - Discussion & outlook
 
-![](./assets/sydney-s10-what-is-neurodesk-img1.png)
+![](./assets/screenshots/screenshot-fsl-feat-fmri-analysis.png)
 
-![](./assets/sydney-s07-installing-and-maintaining-scientific-so-img6.jpeg)
+![](./assets/logos/mrtrix3-logo.jpeg)
 
-![](./assets/sydney-s07-installing-and-maintaining-scientific-so-img7.jpeg)
+![](./assets/figures/ants-brain-normalization.jpeg)
 
-![](./assets/sydney-s10-what-is-neurodesk-img4.png)
+![](./assets/screenshots/bart-mri-reconstruction-code.png)
 
-![](./assets/sydney-s10-what-is-neurodesk-img5.png)
+![](./assets/logos/spinal-cord-toolbox-logo.png)
 
-![](./assets/sydney-s07-installing-and-maintaining-scientific-so-img10.png)
+![](./assets/logos/afni-logo.png)
 
-![](./assets/sydney-s07-installing-and-maintaining-scientific-so-img11.png)
+![](./assets/logos/julia-logo.png)
 
-![](./assets/sydney-s10-what-is-neurodesk-img8.png)
+![](./assets/logos/freesurfer-logo.png)
 
-![](./assets/sydney-s07-installing-and-maintaining-scientific-so-img13.png)
+![](./assets/logos/python-logo-2.png)
 
-![](./assets/sydney-s07-installing-and-maintaining-scientific-so-img14.png)
+![](./assets/logos/itk-snap-logo.png)
 
-![](./assets/sydney-s10-what-is-neurodesk-img11.png)
+![](./assets/logos/logo-virtualbox.png)
 
-![](./assets/sydney-s10-what-is-neurodesk-img12.png)
+![](./assets/logos/neurodesk-logo-4.png)
 
-![](./assets/sydney-s07-installing-and-maintaining-scientific-so-img6.jpeg)
+![](./assets/logos/mrtrix3-logo.jpeg)
 
-![](./assets/sydney-s07-installing-and-maintaining-scientific-so-img7.jpeg)
+![](./assets/figures/ants-brain-normalization.jpeg)
 
-![](./assets/sydney-s10-what-is-neurodesk-img5.png)
+![](./assets/logos/spinal-cord-toolbox-logo.png)
 
-![](./assets/sydney-s07-installing-and-maintaining-scientific-so-img10.png)
+![](./assets/logos/afni-logo.png)
 
-![](./assets/sydney-s10-what-is-neurodesk-img8.png)
+![](./assets/logos/freesurfer-logo.png)
 
-![](./assets/sydney-s07-installing-and-maintaining-scientific-so-img13.png)
+![](./assets/logos/python-logo-2.png)
 
-![](./assets/sydney-s07-installing-and-maintaining-scientific-so-img14.png)
+![](./assets/logos/itk-snap-logo.png)
 
-![](./assets/sydney-s10-what-is-neurodesk-img11.png)
-
-<!-- ===== sciget slide 9 ===== -->
-## What is Neurodesk?
-
-9
-
-
-- Neurodesk uses software containers to make scientific software
-- accessible
-
-- The problems
-
-- Existing solutions
-
-- What's needed
-
-- Proposed architecture
-
-- Discussion & outlook
-
-![](./assets/sciget-s09-what-is-neurodesk-img1.png)
-
-![](./assets/sciget-s06-installing-and-maintaining-scientific-so-img11.jpeg)
-
-![](./assets/sciget-s06-installing-and-maintaining-scientific-so-img12.jpeg)
-
-![](./assets/sciget-s09-what-is-neurodesk-img4.png)
-
-![](./assets/sciget-s09-what-is-neurodesk-img5.png)
-
-![](./assets/sciget-s06-installing-and-maintaining-scientific-so-img15.png)
-
-![](./assets/sciget-s06-installing-and-maintaining-scientific-so-img16.png)
-
-![](./assets/sciget-s09-what-is-neurodesk-img8.png)
-
-![](./assets/sciget-s06-installing-and-maintaining-scientific-so-img18.png)
-
-![](./assets/sciget-s06-installing-and-maintaining-scientific-so-img19.png)
-
-![](./assets/sciget-s09-what-is-neurodesk-img11.png)
-
-![](./assets/sciget-s09-what-is-neurodesk-img12.png)
-
-![](./assets/sciget-s06-installing-and-maintaining-scientific-so-img11.jpeg)
-
-![](./assets/sciget-s06-installing-and-maintaining-scientific-so-img12.jpeg)
-
-![](./assets/sciget-s09-what-is-neurodesk-img5.png)
-
-![](./assets/sciget-s06-installing-and-maintaining-scientific-so-img15.png)
-
-![](./assets/sciget-s09-what-is-neurodesk-img8.png)
-
-![](./assets/sciget-s06-installing-and-maintaining-scientific-so-img18.png)
-
-![](./assets/sciget-s06-installing-and-maintaining-scientific-so-img19.png)
-
-![](./assets/sciget-s09-what-is-neurodesk-img11.png)
+![](./assets/logos/logo-virtualbox.png)

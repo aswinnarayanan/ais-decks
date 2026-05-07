@@ -41,6 +41,8 @@
   line-height: 1.2;
   letter-spacing: -0.02em;
   color: var(--c-heading);
+  font-variant-ligatures: none;
+  font-feature-settings: "liga" 0, "clig" 0, "dlig" 0;
 }
 
 /* Section subtitles / kickers — Manrope 400 (regular) */

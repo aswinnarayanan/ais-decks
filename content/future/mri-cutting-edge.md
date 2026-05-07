@@ -19,9 +19,9 @@ FDA approval for diagnostic workflows
 
 - Discussion & outlook
 
-![](./assets/sydney-s39-bringing-cutting-edge-techniques-to-mri-img1.png)
+![](./assets/diagrams/open-recon-pipeline-container-build-package-deploy.png)
 
-![](./assets/sydney-s39-bringing-cutting-edge-techniques-to-mri-img2.png)
+![](./assets/logos/siemens-healthineers-logo.png)
 
 <!-- ===== sydney slide 40 ===== -->
 ## Deep learning-based vessel segmentation
@@ -57,8 +57,8 @@ https://neurodesk.org/getting-started/neurocontainers/openrecon/
 
 - Discussion & outlook
 
-![](./assets/sydney-s40-deep-learning-based-vessel-segmentation-img1.png)
+![](./assets/screenshots/deep-learning-vessel-segmentation-mra.png)
 
-![](./assets/sydney-s40-deep-learning-based-vessel-segmentation-img2.png)
+![](./assets/screenshots/screenshot-siemens-healthineers-brain-mri-viewer.png)
 
-![](./assets/sydney-s40-deep-learning-based-vessel-segmentation-img3.jpeg)
+![](./assets/screenshots/screenshot-mr-viewgo-pelvic-mri-series.jpeg)

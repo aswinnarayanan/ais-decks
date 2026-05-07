@@ -19,4 +19,4 @@ https://neurodesk.org/edu/
 
 - Discussion & outlook
 
-![](./assets/sydney-s34-neurodeskedu-img1.png)
+![](./assets/diagrams/neurodesk-learning-resources-tutorials-examples.png)

@@ -19,7 +19,7 @@ https://dicompare.neurodesk.org
 
 - Discussion & outlook
 
-![](./assets/sydney-s35-webassembly-to-compute-client-side-in-th-img1.png)
+![](./assets/screenshots/screenshot-dicompare-workspace.png)
 
 > **VIDEO (manual):** `media/media1.mov`
 
@@ -42,6 +42,6 @@ https://qsmbly.neurodesk.org/
 
 - Discussion & outlook
 
-![](./assets/sydney-s36-outlook-webassembly-to-compute-client-si-img1.png)
+![](./assets/screenshots/screenshot-qsmbly-browser-app.png)
 
 > **VIDEO (manual):** `media/media2.mov`

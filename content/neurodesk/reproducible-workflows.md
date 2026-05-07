@@ -16,22 +16,4 @@
 
 - Discussion & outlook
 
-![](./assets/sydney-s11-untitled-img1.png)
-
-<!-- ===== sciget slide 11 ===== -->
-## Reproducible workflows
-
-11
-
-
-- The problems
-
-- Existing solutions
-
-- What's needed
-
-- Proposed architecture
-
-- Discussion & outlook
-
-![](./assets/sciget-s10-untitled-img1.png)
+![](./assets/diagrams/neurodesk-ecosystem-architecture.png)

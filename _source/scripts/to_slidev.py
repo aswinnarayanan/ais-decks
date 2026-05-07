@@ -716,57 +716,6 @@ def main():
 
     # Synthetic "recap" slides injected after a given (deck, num)
     INSERT_AFTER = {
-        ("sydney", 7): """---
----
-
-# Support and acknowledgements
-
-<div class="grid grid-cols-2 gap-6 mt-8">
-
-  <div class="bg-gray-100 text-gray-900 rounded-xl p-4">
-    <div class="mb-2 font-semibold uppercase tracking-wider opacity-80" style="font-size: 13px;">Grants &amp; Funding</div>
-    <table class="w-full text-xs" style="border-collapse: collapse;">
-      <tbody>
-        <tr><td class="font-medium py-0">NIF FDRI co-investment</td><td class="opacity-70 whitespace-nowrap py-0 px-3">1M AUD</td><td class="opacity-70 whitespace-nowrap py-0 text-right">2025–</td></tr>
-        <tr><td class="font-medium py-0">ARDC VRE co-investment</td><td class="opacity-70 whitespace-nowrap py-0 px-3">550k AUD</td><td class="opacity-70 whitespace-nowrap py-0 text-right">2026–</td></tr>
-        <tr><td class="font-medium py-0">ARDC platform grant</td><td class="opacity-70 whitespace-nowrap py-0 px-3">650k AUD</td><td class="opacity-70 whitespace-nowrap py-0 text-right">2020–2023</td></tr>
-        <tr><td class="font-medium py-0">CZI EOSS6 &amp; Wellcome Trust</td><td class="opacity-70 whitespace-nowrap py-0 px-3">600k AUD</td><td class="opacity-70 whitespace-nowrap py-0 text-right">2024–</td></tr>
-        <tr><td class="font-medium py-0">UQ Global Development</td><td class="opacity-70 whitespace-nowrap py-0 px-3">8k AUD</td><td class="opacity-70 whitespace-nowrap py-0 text-right">2024</td></tr>
-      </tbody>
-    </table>
-  </div>
-
-  <div class="bg-gray-100 text-gray-900 rounded-xl p-4">
-    <div class="mb-2 font-semibold uppercase tracking-wider opacity-80" style="font-size: 13px;">Cloud providers</div>
-    <table class="w-full text-xs" style="border-collapse: collapse;">
-      <tbody>
-        <tr><td class="font-medium py-0">ARDC Nectar Research Cloud</td><td class="opacity-70 whitespace-nowrap py-0 text-right">2021–</td></tr>
-        <tr><td class="font-medium py-0">AWS</td><td class="opacity-70 whitespace-nowrap py-0 text-right">2024–</td></tr>
-        <tr><td class="font-medium py-0">EGI Federation</td><td class="opacity-70 whitespace-nowrap py-0 text-right">2024–</td></tr>
-        <tr><td class="font-medium py-0">Google Cloud</td><td class="opacity-70 whitespace-nowrap py-0 text-right">2023–2025</td></tr>
-        <tr><td class="font-medium py-0">JetStream2</td><td class="opacity-70 whitespace-nowrap py-0 text-right">2023–</td></tr>
-        <tr><td class="font-medium py-0">Oracle Cloud</td><td class="opacity-70 whitespace-nowrap py-0 text-right">2021–2023</td></tr>
-        <tr><td class="font-medium py-0">Open Science Grid</td><td class="opacity-70 whitespace-nowrap py-0 text-right">2024–</td></tr>
-      </tbody>
-    </table>
-  </div>
-
-</div>
-
-<div class="absolute left-1/2 -translate-x-1/2 flex flex-nowrap items-center justify-center gap-3 px-4 py-2 bg-white border border-gray-200 shadow-sm" style="bottom: 0; border-bottom: none; border-radius: 12px 12px 0 0; max-width: calc(100% - 2rem);">
-  <img src="./assets/logos/nif-logo.svg" class="h-6 max-w-[80px] object-contain" />
-  <img src="./assets/logos/uq-logo.svg" class="h-6 max-w-[80px] object-contain" />
-  <img src="./assets/logos/ardc-logo.png" class="h-6 max-w-[80px] object-contain" />
-  <img src="./assets/logos/wellcome-logo.png" class="h-9 max-w-[100px] object-contain" />
-  <img src="./assets/logos/ardc-nectar-research-cloud-logo.png" class="h-6 max-w-[80px] object-contain" />
-  <img src="./assets/logos/aws-logo.png" class="h-6 max-w-[80px] object-contain" />
-  <img src="./assets/logos/egi-logo.png" class="h-6 max-w-[80px] object-contain" />
-  <img src="./assets/logos/google-cloud-logo.png" class="h-9 max-w-[100px] object-contain" />
-  <img src="./assets/logos/jetstream2-logo.png" class="h-6 max-w-[80px] object-contain" />
-  <img src="./assets/logos/oracle-cloud-infrastructure-logo.jpeg" class="h-6 max-w-[80px] object-contain" />
-  <img src="./assets/logos/open-science-grid-logo.png" class="h-6 max-w-[80px] object-contain" />
-</div>
-""",
         ("sydney", 15): """---
 section: "Existing solutions"
 layout: full-image
@@ -819,6 +768,84 @@ image: ./assets/screenshots/sciget-extra-2.png
 ---
 
 <!-- extra full image 2 -->
+
+---
+---
+
+# Support and acknowledgements
+
+<div class="grid grid-cols-2 gap-6 mt-8">
+
+  <div class="bg-gray-100 text-gray-900 rounded-xl p-4">
+    <div class="mb-2 font-semibold uppercase tracking-wider opacity-80" style="font-size: 13px;">Grants &amp; Funding</div>
+    <table class="w-full text-xs" style="border-collapse: collapse;">
+      <tbody>
+        <tr><td class="font-medium py-0">NIF FDRI co-investment</td><td class="opacity-70 whitespace-nowrap py-0 px-3">1M AUD</td><td class="opacity-70 whitespace-nowrap py-0 text-right">2025–</td></tr>
+        <tr><td class="font-medium py-0">ARDC VRE co-investment</td><td class="opacity-70 whitespace-nowrap py-0 px-3">550k AUD</td><td class="opacity-70 whitespace-nowrap py-0 text-right">2026–</td></tr>
+        <tr><td class="font-medium py-0">ARDC platform grant</td><td class="opacity-70 whitespace-nowrap py-0 px-3">650k AUD</td><td class="opacity-70 whitespace-nowrap py-0 text-right">2020–2023</td></tr>
+        <tr><td class="font-medium py-0">CZI EOSS6 &amp; Wellcome Trust</td><td class="opacity-70 whitespace-nowrap py-0 px-3">600k AUD</td><td class="opacity-70 whitespace-nowrap py-0 text-right">2024–</td></tr>
+        <tr><td class="font-medium py-0">UQ Global Development</td><td class="opacity-70 whitespace-nowrap py-0 px-3">8k AUD</td><td class="opacity-70 whitespace-nowrap py-0 text-right">2024</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="bg-gray-100 text-gray-900 rounded-xl p-4">
+    <div class="mb-2 font-semibold uppercase tracking-wider opacity-80" style="font-size: 13px;">Cloud providers</div>
+    <table class="w-full text-xs" style="border-collapse: collapse;">
+      <tbody>
+        <tr><td class="font-medium py-0">ARDC Nectar Research Cloud</td><td class="opacity-70 whitespace-nowrap py-0 text-right">2021–</td></tr>
+        <tr><td class="font-medium py-0">AWS</td><td class="opacity-70 whitespace-nowrap py-0 text-right">2024–</td></tr>
+        <tr><td class="font-medium py-0">EGI Federation</td><td class="opacity-70 whitespace-nowrap py-0 text-right">2024–</td></tr>
+        <tr><td class="font-medium py-0">Google Cloud</td><td class="opacity-70 whitespace-nowrap py-0 text-right">2023–2025</td></tr>
+        <tr><td class="font-medium py-0">JetStream2</td><td class="opacity-70 whitespace-nowrap py-0 text-right">2023–</td></tr>
+        <tr><td class="font-medium py-0">Oracle Cloud</td><td class="opacity-70 whitespace-nowrap py-0 text-right">2021–2023</td></tr>
+        <tr><td class="font-medium py-0">Open Science Grid</td><td class="opacity-70 whitespace-nowrap py-0 text-right">2024–</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+</div>
+
+<div class="absolute left-1/2 -translate-x-1/2 flex flex-nowrap items-center justify-center gap-3 px-4 py-2 bg-white border border-gray-200 shadow-sm" style="bottom: 0; border-bottom: none; border-radius: 12px 12px 0 0; max-width: calc(100% - 2rem);">
+  <img src="./assets/logos/nif-logo.svg" class="h-6 max-w-[80px] object-contain" />
+  <img src="./assets/logos/uq-logo.svg" class="h-6 max-w-[80px] object-contain" />
+  <img src="./assets/logos/ardc-logo.png" class="h-6 max-w-[80px] object-contain" />
+  <img src="./assets/logos/wellcome-logo.png" class="h-9 max-w-[100px] object-contain" />
+  <img src="./assets/logos/ardc-nectar-research-cloud-logo.png" class="h-6 max-w-[80px] object-contain" />
+  <img src="./assets/logos/aws-logo.png" class="h-6 max-w-[80px] object-contain" />
+  <img src="./assets/logos/egi-logo.png" class="h-6 max-w-[80px] object-contain" />
+  <img src="./assets/logos/google-cloud-logo.png" class="h-9 max-w-[100px] object-contain" />
+  <img src="./assets/logos/jetstream2-logo.png" class="h-6 max-w-[80px] object-contain" />
+  <img src="./assets/logos/oracle-cloud-infrastructure-logo.jpeg" class="h-6 max-w-[80px] object-contain" />
+  <img src="./assets/logos/open-science-grid-logo.png" class="h-6 max-w-[80px] object-contain" />
+</div>
+
+---
+layout: image-right-crop
+image: ./assets/graphics/sciget-cover-hero.png
+---
+
+# Thank you
+
+<div class="mt-8 space-y-5">
+
+  <div>
+    <div class="font-semibold uppercase tracking-wider opacity-60" style="font-size: 13px;">Websites</div>
+    <div class="mt-2 flex flex-col gap-1" style="font-size: 22px; line-height: 1.5;">
+      <div class="flex items-center gap-3"><span class="i-mdi-web text-2xl opacity-70" />neurodesk.org</div>
+      <div class="flex items-center gap-3"><span class="i-mdi-web text-2xl opacity-70" />sciget.org</div>
+    </div>
+  </div>
+
+  <div>
+    <div class="font-semibold uppercase tracking-wider opacity-60" style="font-size: 13px;">Follow on LinkedIn</div>
+    <div class="mt-2 flex flex-col gap-1" style="font-size: 18px; line-height: 1.5;">
+      <div class="flex items-center gap-3"><span class="i-mdi-linkedin text-2xl" style="color: #0A66C2;" />linkedin.com/company/neurodesk-org</div>
+      <div class="flex items-center gap-3"><span class="i-mdi-linkedin text-2xl" style="color: #0A66C2;" />linkedin.com/company/sciget-org</div>
+    </div>
+  </div>
+
+</div>
 """,
         ("sydney", 40): """---
 layout: image-cover-top-title
