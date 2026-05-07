@@ -1,0 +1,17 @@
+{
+  "name": "ais-decks",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "master": "slidev _source/extracted/_master-slidev.md",
+    "build-master": "python3 _source/scripts/to_slidev.py _source/extracted/content.md _source/extracted/_master-slidev.md"
+  },
+  "devDependencies": {
+    "@iconify-json/carbon": "^1.2.20",
+    "@iconify-json/healthicons": "^1.2.12",
+    "@iconify-json/mdi": "^1.2.3",
+    "@slidev/cli": "^52.15.1",
+    "@slidev/theme-default": "^0.25.0",
+    "slidev-overflow-checker": "^0.1.0"
+  }
+}
