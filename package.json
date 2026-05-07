@@ -12,6 +12,7 @@
     "@iconify-json/mdi": "^1.2.3",
     "@slidev/cli": "^52.15.1",
     "@slidev/theme-default": "^0.25.0",
+    "playwright-chromium": "^1.59.1",
     "slidev-overflow-checker": "^0.1.0"
   }
 }

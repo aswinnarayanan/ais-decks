@@ -747,7 +747,7 @@ logos:
 
 <p class="text-sm opacity-70 mt-2">CVMFS delivers and caches &gt;500GB of software containers for on-demand access</p>
 
-<div class="flex items-center justify-center mt-4" style="height: 380px;">
+<div class="flex items-center justify-center mt-2" style="height: 340px;">
   <img src="./assets/screenshots/sciget-30-cvmfs.png" class="max-h-full max-w-full object-contain" />
 </div>
 """,
