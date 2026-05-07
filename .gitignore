@@ -27,6 +27,7 @@ content/
 *.jpeg
 *.mov
 *.mp4
+*.pdf
 
 # Source pptx files (large) and Python caches
 *.pptx
