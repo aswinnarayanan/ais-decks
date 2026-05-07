@@ -71,12 +71,12 @@ MAPPING = {
     ("sciget", 1):  "_skip",                      # cover (will rebuild)
     ("sciget", 2):  "_skip",                      # roadmap divider
     ("sciget", 3):  "_skip",                       # removed (FAIR)
-    ("sciget", 4):  "motivation/challenges-in-analysis.md",
-    ("sciget", 5):  "motivation/finding-sharing-workflows.md",
+    ("sciget", 4):  "_skip",                       # not needed
+    ("sciget", 5):  "_skip",                       # not needed
     ("sciget", 6):  "_skip",                       # removed (duplicate of sydney 7)
     ("sciget", 7):  "_skip",                      # roadmap divider
-    ("sciget", 8):  "support-acknowledgements.md", # contributors
-    ("sciget", 9):  "neurodesk/what-is-neurodesk.md",
+    ("sciget", 8):  "_skip",                       # not needed
+    ("sciget", 9):  "_skip",                       # not needed
     ("sciget", 10): "_skip",                      # section nav transition
     ("sciget", 11): "_skip",                       # removed
     ("sciget", 12): "_skip",                       # removed (covered earlier)
@@ -91,15 +91,15 @@ MAPPING = {
     ("sciget", 21): "_skip",                       # duplicate workshop
     ("sciget", 22): "_skip",                       # untitled empty placeholder
     ("sciget", 23): "_skip",                       # duplicate of sydney 20 architecture
-    ("sciget", 24): "_skip",                       # removed (covered earlier)
-    ("sciget", 25): "_skip",                       # removed (covered earlier)
+    ("sciget", 24): "_skip",                       # removed
+    ("sciget", 25): "sciget/communities.md",
     ("sciget", 26): "_skip",                       # removed (covered earlier)
     ("sciget", 27): "_skip",                       # removed (covered earlier)
     ("sciget", 28): "_skip",                       # removed (covered earlier)
-    ("sciget", 29): "neurodesk/virtual-desktops.md",
+    ("sciget", 29): "_skip",                       # not needed
     ("sciget", 30): "_skip",                       # moved via INSERT_AFTER sydney 32
-    ("sciget", 31): "neurodesk/computational-notebooks.md",
-    ("sciget", 32): "ais/collaboration-models.md",
+    ("sciget", 31): "_skip",                       # not needed
+    ("sciget", 32): "_skip",                       # not needed
     ("sciget", 33): "_skip",                       # removed
     ("sciget", 34): "_skip",                       # roadmap divider
     ("sciget", 35): "_skip",                       # removed (XNAT deployment series)
@@ -113,10 +113,10 @@ MAPPING = {
     ("sciget", 43): "_skip",                       # removed
     ("sciget", 44): "_skip",                      # roadmap divider
     ("sciget", 45): "sciget/communities.md",       # ecosystem collage
-    ("sciget", 46): "sciget/communities.md",       # ecosystem collage (extended)
-    ("sciget", 47): "roadmap.md",
-    ("sciget", 48): "support-acknowledgements.md",
-    ("sciget", 49): "support-acknowledgements.md",
+    ("sciget", 46): "_skip",                       # removed
+    ("sciget", 47): "_skip",                       # removed
+    ("sciget", 48): "_skip",                       # removed
+    ("sciget", 49): "_skip",                       # removed
     ("sciget", 50): "_skip",                       # removed
     ("sciget", 51): "_skip",                       # removed
     ("sciget", 52): "_skip",                       # removed
@@ -125,7 +125,7 @@ MAPPING = {
     ("sciget", 55): "_skip",                       # removed
     ("sciget", 56): "_skip",                       # removed
     ("sciget", 57): "_skip",                       # removed
-    ("sciget", 58): "ais/neurodesk-on-ais-demo.md",  # MRI viewer
+    ("sciget", 58): "_skip",                       # not needed
 }
 
 

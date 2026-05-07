@@ -105,6 +105,8 @@ CLOUD_LOGOS = [
 ]
 LOGO_OVERRIDES = {
     ("sydney", 7): [],   # software logos are content (chaos jumble), not branding
+    ("sciget", 25): [],  # Communities — no pill
+    ("sciget", 45): [],  # Communities (extended) — no pill
     ("sydney", 10): [],  # software logos are content, not branding
     **{("sydney", n): [] for n in range(21, 29)},  # full-screen screenshots, no pill
     ("sydney", 30): [],  # neurocontainers UI — no pill
@@ -313,6 +315,18 @@ Aswin Narayanan
 - **Tools**: dicompare, QSMbly, MuscleMap, VesselBoost
 """,
     ("sydney", 36): "<!-- full-video via layout -->",
+    ("sciget", 25): """# From Neurodesk to Sciget
+
+<div class="flex items-center justify-center mt-4" style="height: 400px;">
+  <img src="./assets/screenshots/sciget-25-communities.png" class="max-h-full max-w-full object-contain" />
+</div>
+""",
+    ("sciget", 45): """<div class="absolute inset-0 flex items-center justify-center">
+  <img src="./assets/screenshots/sciget-45-communities.png" class="max-h-full max-w-full object-contain" />
+</div>
+
+<h1 class="absolute top-8 left-14 z-10" style="background: rgba(255,255,255,0.85); padding: 8px 16px; border-radius: 8px;">Communities</h1>
+""",
     ("sydney", 38): """# Could we streamline translation even further?
 
 <div class="flex items-center justify-center gap-3 mt-16">
@@ -761,9 +775,8 @@ image: ./assets/diagrams/neurodesk-ecosystem-architecture.png
 
 <!-- recap: full architecture (after crops) -->
 """,
-        ("sydney", 32): """---
+        ("sydney", 30): """---
 logos:
-  - ./assets/logos/cernvm-file-system-logo.png
   - ./assets/logos/ardc-nectar-research-cloud-logo.png
   - ./assets/logos/egi-logo.png
   - ./assets/logos/jetstream2-logo.png
@@ -774,10 +787,8 @@ logos:
 
 <p class="text-sm opacity-70 mt-2">CVMFS delivers and caches &gt;500GB of software containers for on-demand access</p>
 
-<p class="absolute top-12 right-12 text-xs opacity-50">🔗 neurodesk.org/developers/cvmfs/</p>
-
-<div class="flex items-center justify-center mt-8" style="height: 380px;">
-  <img src="./assets/diagrams/cvmfs-stratum-replication-architecture.png" class="max-h-full max-w-full object-contain" />
+<div class="flex items-center justify-center mt-4" style="height: 380px;">
+  <img src="./assets/screenshots/sciget-30-cvmfs.png" class="max-h-full max-w-full object-contain" />
 </div>
 """,
         ("sydney", 35): """---
@@ -794,6 +805,20 @@ video: ./assets/videos/coding-agents-demo.mov
 ---
 
 <!-- coding agents demo video -->
+""",
+        ("sciget", 45): """---
+layout: full-image
+image: ./assets/screenshots/sciget-extra-1.png
+---
+
+<!-- extra full image 1 -->
+
+---
+layout: full-image
+image: ./assets/screenshots/sciget-extra-2.png
+---
+
+<!-- extra full image 2 -->
 """,
         ("sydney", 40): """---
 layout: image-cover-top-title
@@ -849,6 +874,13 @@ logos:
 """,
     }
 
+    # Build a (deck, num) -> body lookup so we can render arbitrary slides on demand
+    body_lookup = {}
+    j = 1
+    while j < len(parts):
+        body_lookup[(parts[j], int(parts[j + 1]))] = parts[j + 2]
+        j += 3
+
     slides = []
     i = 1
     while i < len(parts):
@@ -859,15 +891,37 @@ logos:
         slide = parse_slide(deck, num, body)
         slides.append(render(slide))
         if (deck, int(num)) in INSERT_AFTER:
-            slides.append(INSERT_AFTER[(deck, int(num))])
+            insert = INSERT_AFTER[(deck, int(num))]
+            if isinstance(insert, dict) and "render" in insert:
+                # Render a different source slide (e.g. moved sciget content)
+                src_deck, src_num = insert["render"]
+                src_body = body_lookup.get((src_deck, src_num), "")
+                src_slide = parse_slide(src_deck, str(src_num), src_body)
+                slides.append(render(src_slide))
+            else:
+                slides.append(insert)
         i += 3
+
+    # Annotate each slide with its master position number so debugging is easier
+    annotated = []
+    for n, content in enumerate(slides, start=1):
+        # insert master annotation right after the closing frontmatter `---`
+        marker = f"<!-- master slide {n} -->"
+        # find the second --- (end of frontmatter)
+        idx = content.find("---", content.find("---") + 3)
+        if idx >= 0:
+            insert_at = content.find("\n", idx) + 1
+            annotated.append(content[:insert_at] + f"\n{marker}\n" + content[insert_at:])
+        else:
+            annotated.append(f"{marker}\n{content}")
+    slides = annotated
 
     # Inject global config into the first slide's frontmatter (avoids a blank slide 1)
     if slides:
         slides[0] = slides[0].replace("---\n", f"---\n{global_config}", 1)
 
     dst.write_text("\n".join(slides))
-    print(f"Wrote {dst}")
+    print(f"Wrote {dst} ({len(slides)} slides)")
 
 
 if __name__ == "__main__":
