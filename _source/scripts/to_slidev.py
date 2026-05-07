@@ -64,6 +64,19 @@ LAYOUT_OVERRIDES = {
         "video": "./assets/videos/qsmbly-demo.mov",
         "link": "qsmbly.neurodesk.org",
     },
+    ("sydney", 37): {
+        "layout": "image-left-crop",
+        "image": "./assets/screenshots/screenshot-claude-code-neurodesk-bypass-permissions.png",
+    },
+    ("sydney", 39): {
+        "layout": "title-image",
+        "image": "./assets/diagrams/open-recon-pipeline-container-build-package-deploy.png",
+    },
+    ("sydney", 40): {
+        "layout": "image-cover-top-title",
+        "image": "./assets/screenshots/deep-learning-vessel-segmentation-mra.png",
+        "credit": '"image credit: Daniel Güllmar"',
+    },
 }
 
 # Per-slide logo overrides — replaces auto-detected logos
@@ -88,7 +101,12 @@ LOGO_OVERRIDES = {
     ("sydney", 34): [],  # neurodeskEDU — no pill
     ("sydney", 35): [],  # webassembly — no pill
     ("sydney", 36): [],  # webassembly outlook — no pill
-    **{("sydney", n): AIS_LOGOS for n in range(18, 50) if not (21 <= n <= 28) and n not in (30, 31, 32, 33, 34, 35, 36)},
+    ("sydney", 37): [],  # coding agents — no pill
+    ("sydney", 38): [],  # streamline translation — no pill
+    ("sydney", 39): ["./assets/logos/siemens-healthineers-logo.png"],  # Siemens for OpenRecon
+    ("sydney", 40): [],  # vessel/brain/prostate — no pill
+    ("sydney", 41): [],  # summary — no pill
+    **{("sydney", n): AIS_LOGOS for n in range(18, 50) if not (21 <= n <= 28) and n not in (30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41)},
 }
 
 # Section assignment per slide (drives the SectionNav highlight)
@@ -257,6 +275,89 @@ MANUAL_BODIES = {
 - **Tools**: dicompare, QSMbly, MuscleMap, VesselBoost
 """,
     ("sydney", 36): "<!-- full-video via layout -->",
+    ("sydney", 38): """# Could we streamline translation even further?
+
+<div class="flex items-center justify-center gap-3 mt-16">
+  <img src="./assets/graphics/translation-step-1-develop.png" class="h-28 w-28 object-contain rounded" />
+  <span class="text-4xl" style="color: #5b7c4f;">→</span>
+  <img src="./assets/graphics/translation-step-2-acquire.png" class="h-28 w-28 object-contain rounded" />
+  <span class="text-4xl" style="color: #5b7c4f;">→</span>
+  <img src="./assets/graphics/translation-step-3-export.png" class="h-28 w-28 object-contain rounded" />
+  <span class="text-4xl" style="color: #5b7c4f;">→</span>
+  <img src="./assets/graphics/translation-step-4-implement.png" class="h-28 w-28 object-contain rounded" />
+  <span class="text-4xl" style="color: #5b7c4f;">→</span>
+  <img src="./assets/graphics/translation-step-5-integrate.png" class="h-28 w-28 object-contain rounded" />
+</div>
+
+<div class="flex items-center justify-center gap-4 mt-8 px-8">
+  <p class="font-semibold m-0">Develop analysis pipeline</p>
+  <div class="flex-1 flex items-center min-w-0">
+    <div class="flex-1 border-t-2 border-dashed" style="border-color: #5b7c4f;"></div>
+    <span class="text-3xl -ml-2" style="color: #5b7c4f;">→</span>
+  </div>
+  <p class="font-semibold m-0">Integrate into clinical workflow</p>
+</div>
+
+<div class="flex items-center justify-center flex-wrap gap-x-6 gap-y-2 mt-10 opacity-60">
+  <span class="text-base" style="transform: rotate(-4deg); display: inline-block;">programming languages</span>
+  <span class="text-sm italic" style="transform: rotate(3deg); display: inline-block;">open-source tools</span>
+  <span class="text-lg font-bold" style="transform: rotate(-2deg); display: inline-block;">complex dependencies</span>
+  <span class="text-xs" style="transform: rotate(6deg); display: inline-block;">visualisation</span>
+  <span class="text-base italic" style="transform: rotate(-3deg); display: inline-block;">versioning</span>
+  <span class="text-base font-bold" style="transform: rotate(-5deg); display: inline-block;">…</span>
+</div>
+""",
+    ("sydney", 39): """# Bringing cutting-edge techniques to MRI scanners
+""",
+    ("sydney", 41): """# Summary
+
+<div class="flex flex-col items-stretch max-w-[700px] gap-3 mt-4">
+  <div class="flex items-center gap-4">
+    <img src="./assets/graphics/translation-step-1-develop.png" class="h-12 w-12 object-contain rounded flex-shrink-0" />
+    <span class="flex-1 px-5 py-3 rounded-lg" style="background: #5b7c4f; color: white;">Develop analysis workflow & build Open Recon package</span>
+  </div>
+  <div class="flex items-center gap-4">
+    <img src="./assets/graphics/translation-step-2-acquire.png" class="h-12 w-12 object-contain rounded flex-shrink-0" />
+    <span class="flex-1 px-5 py-3 rounded-lg" style="background: #5b7c4f; color: white;">Run on the scanner using Open Recon</span>
+  </div>
+</div>
+
+<div class="flex items-center justify-center gap-4 mt-8">
+
+  <div class="text-center px-5 py-5 rounded-xl flex flex-col items-center gap-3 bg-gray-100" style="width: 220px; min-height: 200px;">
+    <img src="./assets/logos/neurodesk-logo.png" class="h-20 object-contain" />
+    <p class="font-semibold text-xs m-0 leading-snug">Neurodesk makes building software containers accessible</p>
+  </div>
+
+  <span class="text-5xl font-bold" style="color: #5b7c4f;">+</span>
+
+  <div class="text-center px-5 py-5 rounded-xl flex flex-col items-center gap-3 bg-gray-100" style="width: 220px; min-height: 200px;">
+    <img src="./assets/graphics/mri-scanner-illustration.png" class="h-20 object-contain" />
+    <p class="font-semibold text-xs m-0 leading-snug">Open Recon integrates containers into the scanner</p>
+  </div>
+
+  <span class="text-5xl font-bold" style="color: #5b7c4f;">=</span>
+
+  <div class="text-center px-5 py-5 rounded-xl flex flex-col items-center gap-3 bg-gray-100" style="width: 220px; min-height: 200px;">
+    <mdi-sync class="text-6xl" style="color: #5b7c4f;" />
+    <p class="font-semibold text-xs m-0 leading-snug">Faster development and translation cycles</p>
+  </div>
+
+</div>
+
+<p class="text-xs opacity-60 mt-6 text-center">🔗 neurodesk.org/getting-started/neurocontainers/openrecon/</p>
+""",
+    ("sydney", 40): """# Deep learning-based vessel segmentation
+""",
+    ("sydney", 37): """# Neurodesk + coding agents = analysis agents!
+
+- **Develop analysis code** alongside an AI agent
+- **OpenCode** — open-source coding agent
+- **Codex** — coding agent from OpenAI
+- **Claude Code** — coding agent from Anthropic
+- **Notebook Intelligence** — notebook coding agent
+- **Sandboxed** in the Neurodesk container
+""",
     ("sydney", 34): """# NeurodeskEDU
 
 <p class="absolute top-12 right-12 text-base opacity-70">🔗 neurodesk.org/edu</p>
@@ -561,6 +662,45 @@ link: dicompare.neurodesk.org
 ---
 
 <!-- dicompare demo video -->
+""",
+        ("sydney", 37): """---
+layout: full-video
+video: ./assets/videos/coding-agents-demo.mov
+---
+
+<!-- coding agents demo video -->
+""",
+        ("sydney", 40): """---
+layout: image-cover-top-title
+image: ./assets/screenshots/screenshot-siemens-healthineers-brain-mri-viewer.png
+---
+
+# FSL BET brain extraction
+""" + """
+---
+layout: image-cover-top-title
+image: ./assets/screenshots/screenshot-mr-viewgo-pelvic-mri-series.jpeg
+credit: "image credit: Jonathan Goodwin"
+---
+
+# Deep learning-based prostate fiducial marker detection
+""",
+        ("sydney", 39): """---
+logos:
+  - ./assets/logos/siemens-healthineers-logo.png
+---
+
+# Open Recon — Neurodesk on the scanner
+
+- **Siemens partnership** — run containers directly on MRIs via the Open Recon feature
+- **At point of acquisition** — bring advanced analysis methods into the scanning process
+- **FDA approval pathway** — diagnostic workflows possible via Siemens' ecosystem
+- **Workflow:** Build container in Neurodesk → package for Open Recon → upload to Siemens C2P → deploy on any Open Recon-enabled scanner
+- **Open Recon repository** — packaging and distribution
+
+<div class="flex items-center justify-center mt-8 mb-12">
+  <img src="./assets/diagrams/open-recon-pipeline-container-build-package-deploy.png" class="max-h-32 max-w-full object-contain opacity-80" />
+</div>
 """,
     }
 
