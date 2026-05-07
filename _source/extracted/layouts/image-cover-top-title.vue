@@ -5,7 +5,6 @@ const { $frontmatter } = useSlideContext()
 
 <template>
   <div class="slidev-layout flex flex-col" style="padding: 0; overflow: hidden; height: 100%;">
-    <!-- Title bar flush at top: title left, credit right -->
     <div
       class="top-title-bar flex-shrink-0 flex items-center justify-between gap-4"
       style="padding: 6px 16px; border-bottom: 1px solid var(--c-border, #EAEAEA);"
@@ -19,17 +18,12 @@ const { $frontmatter } = useSlideContext()
         style="font-size: 14px; line-height: 1;"
       >{{ $frontmatter.credit }}</span>
     </div>
-
-    <!-- Image fills the remaining area -->
-    <div
-      class="flex-1 relative overflow-hidden"
-      :style="{
-        backgroundImage: `url('${$frontmatter.image}')`,
-        backgroundSize: 'contain',
-        backgroundPosition: $frontmatter.imagePosition || 'center center',
-        backgroundRepeat: 'no-repeat',
-      }"
-    ></div>
+    <div class="flex-1 overflow-hidden flex items-center justify-center">
+      <img
+        :src="$frontmatter.image"
+        style="max-width: 100%; max-height: 100%; object-fit: contain;"
+      />
+    </div>
   </div>
 </template>
 

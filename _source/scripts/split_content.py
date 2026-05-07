@@ -57,15 +57,15 @@ MAPPING = {
     ("sydney", 38): "future/streamline-translation.md",
     ("sydney", 39): "future/mri-cutting-edge.md",
     ("sydney", 40): "future/mri-cutting-edge.md",
-    ("sydney", 41): "future/summary.md",
-    ("sydney", 42): "future/coding-agents.md",
+    ("sydney", 41): "_skip",                      # removed
+    ("sydney", 42): "_skip",                      # removed (image moved to sydney 44)
     ("sydney", 43): "ais/collaboration-models.md",
     ("sydney", 44): "ais/open-data-workflow.md",
     ("sydney", 45): "motivation/need-for-fair.md", # FAIR citation
     ("sydney", 46): "_skip",                      # roadmap divider
-    ("sydney", 47): "roadmap.md",
-    ("sydney", 48): "support-acknowledgements.md",
-    ("sydney", 49): "thank-you.md",
+    ("sydney", 47): "_skip",                      # removed
+    ("sydney", 48): "_skip",                      # moved earlier via INSERT_AFTER
+    ("sydney", 49): "_skip",                      # removed
 
     # === Sciget (58 slides) ===
     ("sciget", 1):  "_skip",                      # cover (will rebuild)
@@ -117,14 +117,14 @@ MAPPING = {
     ("sciget", 47): "roadmap.md",
     ("sciget", 48): "support-acknowledgements.md",
     ("sciget", 49): "support-acknowledgements.md",
-    ("sciget", 50): "thank-you.md",
-    ("sciget", 51): "ais/neurodesk-on-ais-demo.md",  # XNAT dashboard
-    ("sciget", 52): "ais/neurodesk-on-ais-demo.md",  # XNAT MR session scans
-    ("sciget", 53): "ais/neurodesk-on-ais-demo.md",  # XNAT jupyter launch
-    ("sciget", 54): "ais/neurodesk-on-ais-demo.md",  # JupyterLab Neurodesk launcher
-    ("sciget", 55): "ais/neurodesk-on-ais-demo.md",  # neurodesk terminal
-    ("sciget", 56): "ais/neurodesk-on-ais-demo.md",  # neurodesk desktop menu
-    ("sciget", 57): "ais/neurodesk-on-ais-demo.md",  # FSLeyes
+    ("sciget", 50): "_skip",                       # removed
+    ("sciget", 51): "_skip",                       # removed
+    ("sciget", 52): "_skip",                       # removed
+    ("sciget", 53): "_skip",                       # removed
+    ("sciget", 54): "_skip",                       # removed
+    ("sciget", 55): "_skip",                       # removed
+    ("sciget", 56): "_skip",                       # removed
+    ("sciget", 57): "_skip",                       # removed
     ("sciget", 58): "ais/neurodesk-on-ais-demo.md",  # MRI viewer
 }
 

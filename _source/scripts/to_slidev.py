@@ -28,7 +28,10 @@ NAV_TERMS = {
 
 # Per-slide layout overrides: (deck, slide_num) -> layout
 LAYOUT_OVERRIDES = {
-    ("sydney", 3): "cover",  # speaker intro / title slide
+    ("sydney", 3): {
+        "layout": "image-right-crop",
+        "image": "./assets/graphics/cover-hero.png",
+    },
     ("sydney", 12): {"layout": "full-image", "image": "./assets/diagrams/neurodesk-ecosystem-architecture.png"},
     ("sydney", 13): {"layout": "full-image", "image": "./assets/diagrams/neurodesk-ecosystem-architecture-crop-1.png"},
     ("sydney", 14): {"layout": "full-image", "image": "./assets/diagrams/neurodesk-ecosystem-architecture-crop-2.png"},
@@ -77,6 +80,15 @@ LAYOUT_OVERRIDES = {
         "image": "./assets/screenshots/deep-learning-vessel-segmentation-mra.png",
         "credit": '"image credit: Daniel Güllmar"',
     },
+    ("sydney", 44): {
+        "layout": "full-image",
+        "image": "./assets/diagrams/open-data-workflow-hero.png",
+    },
+    ("sydney", 43): {
+        "layout": "full-image",
+        "image": "./assets/diagrams/decentralised-collaboration.png",
+        "credit": '"Dao et al., 2025"',
+    },
 }
 
 # Per-slide logo overrides — replaces auto-detected logos
@@ -106,7 +118,9 @@ LOGO_OVERRIDES = {
     ("sydney", 39): ["./assets/logos/siemens-healthineers-logo.png"],  # Siemens for OpenRecon
     ("sydney", 40): [],  # vessel/brain/prostate — no pill
     ("sydney", 41): [],  # summary — no pill
-    **{("sydney", n): AIS_LOGOS for n in range(18, 50) if not (21 <= n <= 28) and n not in (30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41)},
+    ("sydney", 43): [],  # decentralised collaboration hero — no pill
+    ("sydney", 44): [],  # open data workflow hero — no pill
+    **{("sydney", n): AIS_LOGOS for n in range(18, 50) if not (21 <= n <= 28) and n not in (30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 43, 44)},
 }
 
 # Section assignment per slide (drives the SectionNav highlight)
@@ -125,6 +139,12 @@ SECTION_OVERRIDES = {
 
 # Per-slide hand-crafted bodies: (deck, slide_num) -> raw body (overrides auto-render)
 MANUAL_BODIES = {
+    ("sydney", 3): """# Neurodesk overview
+
+Aswin Narayanan
+
+The University of Queensland · National Imaging Facility
+""",
     ("sydney", 5): """# Finding and Sharing Workflows
 
 <div class="flex gap-3 mt-12 items-start">
@@ -309,6 +329,8 @@ MANUAL_BODIES = {
 """,
     ("sydney", 39): """# Bringing cutting-edge techniques to MRI scanners
 """,
+    ("sydney", 43): "<!-- full-image hero -->",
+    ("sydney", 44): "<!-- full-image hero -->",
     ("sydney", 41): """# Summary
 
 <div class="flex flex-col items-stretch max-w-[700px] gap-3 mt-4">
@@ -324,22 +346,22 @@ MANUAL_BODIES = {
 
 <div class="flex items-center justify-center gap-4 mt-8">
 
-  <div class="text-center px-5 py-5 rounded-xl flex flex-col items-center gap-3 bg-gray-100" style="width: 220px; min-height: 200px;">
-    <img src="./assets/logos/neurodesk-logo.png" class="h-20 object-contain" />
+  <div class="text-center px-4 py-4 rounded-xl flex flex-col items-center gap-2 bg-gray-100" style="width: 200px; min-height: 170px;">
+    <img src="./assets/logos/neurodesk-logo.png" class="h-16 object-contain" />
     <p class="font-semibold text-xs m-0 leading-snug">Neurodesk makes building software containers accessible</p>
   </div>
 
   <span class="text-5xl font-bold" style="color: #5b7c4f;">+</span>
 
-  <div class="text-center px-5 py-5 rounded-xl flex flex-col items-center gap-3 bg-gray-100" style="width: 220px; min-height: 200px;">
-    <img src="./assets/graphics/mri-scanner-illustration.png" class="h-20 object-contain" />
+  <div class="text-center px-4 py-4 rounded-xl flex flex-col items-center gap-2 bg-gray-100" style="width: 200px; min-height: 170px;">
+    <img src="./assets/graphics/mri-scanner-illustration.png" class="h-16 object-contain" />
     <p class="font-semibold text-xs m-0 leading-snug">Open Recon integrates containers into the scanner</p>
   </div>
 
   <span class="text-5xl font-bold" style="color: #5b7c4f;">=</span>
 
-  <div class="text-center px-5 py-5 rounded-xl flex flex-col items-center gap-3 bg-gray-100" style="width: 220px; min-height: 200px;">
-    <mdi-sync class="text-6xl" style="color: #5b7c4f;" />
+  <div class="text-center px-4 py-4 rounded-xl flex flex-col items-center gap-2 bg-gray-100" style="width: 200px; min-height: 170px;">
+    <mdi-sync class="text-5xl" style="color: #5b7c4f;" />
     <p class="font-semibold text-xs m-0 leading-snug">Faster development and translation cycles</p>
   </div>
 
@@ -647,6 +669,45 @@ def main():
 
     # Synthetic "recap" slides injected after a given (deck, num)
     INSERT_AFTER = {
+        ("sydney", 7): """---
+---
+
+# Support and acknowledgements
+
+<div class="grid grid-cols-3 gap-6 mt-8">
+
+  <div class="bg-gray-100 rounded-xl p-5">
+    <h3 class="m-0 mb-3 font-semibold">Grant Funding</h3>
+    <ul class="m-0 p-0 list-none space-y-2 text-sm">
+      <li>• NIF co-investment (1M AUD)</li>
+      <li>• ARDC platform grant 2020–2023 (650k AUD)</li>
+      <li>• EOSS6 2024–2026 (600k AUD)</li>
+      <li>• UQ Global Development (8k AUD)</li>
+    </ul>
+  </div>
+
+  <div class="bg-gray-100 rounded-xl p-5">
+    <h3 class="m-0 mb-3 font-semibold">Community</h3>
+    <ul class="m-0 p-0 list-none space-y-2 text-sm">
+      <li>• &gt; 10 active contributors</li>
+      <li>• CVMFS hosting via Open Science Grid, EGI, JetStream2</li>
+    </ul>
+  </div>
+
+  <div class="bg-gray-100 rounded-xl p-5">
+    <h3 class="m-0 mb-3 font-semibold">Cloud providers</h3>
+    <ul class="m-0 p-0 list-none space-y-2 text-sm">
+      <li>• ARDC Nectar Cloud (2021–)</li>
+      <li>• AWS (2024–)</li>
+      <li>• EGI (2024–)</li>
+      <li>• Google Cloud (2023–)</li>
+      <li>• JetStream2 (2023–)</li>
+      <li>• Oracle Cloud (2021–2023)</li>
+    </ul>
+  </div>
+
+</div>
+""",
         ("sydney", 15): """---
 section: "Existing solutions"
 layout: full-image
