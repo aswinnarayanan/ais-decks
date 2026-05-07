@@ -21,6 +21,17 @@ _split = importlib.util.module_from_spec(_spec)
 _spec.loader.exec_module(_split)
 SKIP_SLIDES = {k for k, v in _split.MAPPING.items() if v in ("_skip", "_planning")}
 
+# Slides that exist in source but should be MOVED via INSERT_AFTER, not rendered
+# in their natural position.
+RELOCATED = {
+    ("sydney", 9),                            # contributors → after sydney 10
+    ("sydney", 31),                           # cloud servers → after sydney 33
+    ("sydney", 18), ("sydney", 19),           # AIS section → after sydney 34
+    ("sydney", 20), ("sydney", 21), ("sydney", 22), ("sydney", 23),
+    ("sydney", 24), ("sydney", 25), ("sydney", 26), ("sydney", 27),
+    ("sydney", 28),
+}
+
 NAV_TERMS = {
     "The problems", "Existing solutions", "What's needed",
     "Proposed architecture", "Discussion & outlook", "FAIR",
@@ -871,7 +882,10 @@ image: ./assets/graphics/sugarglider-photo.jpg
 
 Making Scientific Software Accessible
 """,
-        ("sydney", 16): """---
+        ("sydney", 10): {"render": ("sydney", 9)},
+        ("sydney", 33): {"render": ("sydney", 31)},
+        ("sydney", 34): [
+            """---
 layout: image-right-crop
 image: ./assets/graphics/ais-cover-hero.png
 logos:
@@ -882,6 +896,18 @@ logos:
 
 # Australian Imaging Service
 """,
+            {"render": ("sydney", 18)},
+            {"render": ("sydney", 19)},
+            {"render": ("sydney", 20)},
+            {"render": ("sydney", 21)},
+            {"render": ("sydney", 22)},
+            {"render": ("sydney", 23)},
+            {"render": ("sydney", 24)},
+            {"render": ("sydney", 25)},
+            {"render": ("sydney", 26)},
+            {"render": ("sydney", 27)},
+            {"render": ("sydney", 28)},
+        ],
         ("sydney", 39): """---
 logos:
   - ./assets/logos/siemens-healthineers-logo.png
@@ -908,25 +934,32 @@ logos:
         body_lookup[(parts[j], int(parts[j + 1]))] = parts[j + 2]
         j += 3
 
+    def append_item(item):
+        if isinstance(item, dict) and "render" in item:
+            src_deck, src_num = item["render"]
+            src_body = body_lookup.get((src_deck, src_num), "")
+            src_slide = parse_slide(src_deck, str(src_num), src_body)
+            slides.append(render(src_slide))
+        else:
+            slides.append(item)
+
     slides = []
     i = 1
     while i < len(parts):
         deck, num, body = parts[i], parts[i + 1], parts[i + 2]
-        if (deck, int(num)) in SKIP_SLIDES:
+        key = (deck, int(num))
+        if key in SKIP_SLIDES or key in RELOCATED:
             i += 3
             continue
         slide = parse_slide(deck, num, body)
         slides.append(render(slide))
-        if (deck, int(num)) in INSERT_AFTER:
-            insert = INSERT_AFTER[(deck, int(num))]
-            if isinstance(insert, dict) and "render" in insert:
-                # Render a different source slide (e.g. moved sciget content)
-                src_deck, src_num = insert["render"]
-                src_body = body_lookup.get((src_deck, src_num), "")
-                src_slide = parse_slide(src_deck, str(src_num), src_body)
-                slides.append(render(src_slide))
+        if key in INSERT_AFTER:
+            insert = INSERT_AFTER[key]
+            if isinstance(insert, list):
+                for item in insert:
+                    append_item(item)
             else:
-                slides.append(insert)
+                append_item(insert)
         i += 3
 
     # Annotate each slide with its master position number so debugging is easier
