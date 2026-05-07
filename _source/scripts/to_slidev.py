@@ -153,7 +153,7 @@ SECTION_OVERRIDES = {
 
 # Per-slide hand-crafted bodies: (deck, slide_num) -> raw body (overrides auto-render)
 MANUAL_BODIES = {
-    ("sydney", 3): """# Neurodesk overview
+    ("sydney", 3): """# Neurodesk
 
 Aswin Narayanan
 """,
@@ -882,9 +882,9 @@ image: ./assets/graphics/sugarglider-photo.jpg
 
 Making Scientific Software Accessible
 """,
-        ("sydney", 10): {"render": ("sydney", 9)},
         ("sydney", 33): {"render": ("sydney", 31)},
         ("sydney", 34): [
+            {"render": ("sydney", 9)},
             """---
 layout: image-right-crop
 image: ./assets/graphics/ais-cover-hero.png
@@ -895,6 +895,8 @@ logos:
 ---
 
 # Australian Imaging Service
+
+<p class="opacity-70 mt-2" style="font-size: 22px;">Integrating Neurodesk and Jupyter into a national imaging platform</p>
 """,
             {"render": ("sydney", 18)},
             {"render": ("sydney", 19)},
@@ -907,6 +909,15 @@ logos:
             {"render": ("sydney", 26)},
             {"render": ("sydney", 27)},
             {"render": ("sydney", 28)},
+            """---
+layout: image-right-crop
+image: ./assets/graphics/cover-hero.png
+---
+
+# Neurodesk
+
+<p class="opacity-70 mt-2" style="font-size: 22px;">Recent and upcoming developments</p>
+""",
         ],
         ("sydney", 39): """---
 logos:
