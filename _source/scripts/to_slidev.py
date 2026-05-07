@@ -29,10 +29,16 @@ NAV_TERMS = {
 # Per-slide layout overrides: (deck, slide_num) -> layout
 LAYOUT_OVERRIDES = {
     ("sydney", 3): {
-        "layout": "image-right-crop",
-        "image": "./assets/graphics/cover-hero.png",
+        "layout": "image-top-cover",
+        "image": "./assets/graphics/numbat-photo.webp",
     },
+    ("sydney", 9): {"layout": "image-cover-top-title", "image": "./assets/graphics/contributor-map.png"},
     ("sydney", 12): {"layout": "full-image", "image": "./assets/diagrams/neurodesk-ecosystem-architecture.png"},
+    ("sydney", 34): {
+        "layout": "full-image",
+        "image": "./assets/screenshots/neurodesk-edu-tutorials-vs-examples.png",
+        "link": "neurodesk.org/edu",
+    },
     ("sydney", 13): {"layout": "full-image", "image": "./assets/diagrams/neurodesk-ecosystem-architecture-crop-1.png"},
     ("sydney", 14): {"layout": "full-image", "image": "./assets/diagrams/neurodesk-ecosystem-architecture-crop-2.png"},
     ("sydney", 15): {"layout": "full-image", "image": "./assets/diagrams/neurodesk-ecosystem-architecture-crop-3.png"},
@@ -82,12 +88,7 @@ LAYOUT_OVERRIDES = {
     },
     ("sydney", 44): {
         "layout": "full-image",
-        "image": "./assets/diagrams/open-data-workflow-hero.png",
-    },
-    ("sydney", 43): {
-        "layout": "full-image",
-        "image": "./assets/diagrams/decentralised-collaboration.png",
-        "credit": '"Dao et al., 2025"',
+        "image": "./assets/diagrams/open-data-workflow-hero.svg",
     },
 }
 
@@ -142,8 +143,8 @@ MANUAL_BODIES = {
     ("sydney", 3): """# Neurodesk overview
 
 Aswin Narayanan
-
-The University of Queensland · National Imaging Facility
+""",
+    ("sydney", 9): """# Neurodesk contributors
 """,
     ("sydney", 5): """# Finding and Sharing Workflows
 
@@ -166,7 +167,7 @@ The University of Queensland · National Imaging Facility
 """,
     ("sydney", 6): """# Challenges in Scientific Data Analysis
 
-<div class="grid grid-cols-4 gap-6 mt-8">
+<div class="grid grid-cols-4 mt-8 divide-x divide-gray-200">
 
   <div class="flex flex-col items-center text-center">
     <div class="flex-1 flex flex-col items-center justify-center gap-2">
@@ -216,7 +217,9 @@ The University of Queensland · National Imaging Facility
 
 </div>
 
-<div class="flex gap-2 items-center justify-center mt-8 mb-12">
+<hr class="border-t border-gray-200 my-4" />
+
+<div class="flex gap-2 items-center justify-center mt-4 mb-12">
   <img src="./assets/graphics/confused-researcher-at-desk-with-programming-languages.png" class="h-24 object-contain" />
   <img src="./assets/graphics/researcher-error-vs-success-illustration.png" class="h-24 object-contain" />
   <img src="./assets/graphics/illustration-researcher-segmentation-error.png" class="h-24 object-contain" />
@@ -224,7 +227,7 @@ The University of Queensland · National Imaging Facility
 """,
     ("sydney", 10): """# What is Neurodesk?
 
-<div class="grid grid-cols-3 gap-6 mt-8 items-center">
+<div class="grid grid-cols-3 mt-8 items-center divide-x divide-gray-200">
 
   <div class="relative h-72">
     <img src="./assets/logos/mrtrix3-logo.jpeg" class="absolute h-12 object-contain bg-white rounded p-1" style="top: 2%; left: 10%; transform: rotate(-12deg);" />
@@ -234,26 +237,41 @@ The University of Queensland · National Imaging Facility
     <img src="./assets/logos/python-logo.png" class="absolute h-12 object-contain bg-white rounded p-1" style="top: 45%; left: 5%; transform: rotate(15deg);" />
     <img src="./assets/logos/julia-logo.png" class="absolute h-10 object-contain bg-white rounded p-1" style="top: 55%; left: 50%; transform: rotate(-8deg);" />
     <img src="./assets/logos/mne-python-logo.png" class="absolute h-10 object-contain bg-white rounded p-1" style="top: 65%; left: 15%; transform: rotate(6deg);" />
-    <img src="./assets/logos/itk-snap-logo.png" class="absolute h-12 object-contain bg-white rounded p-1" style="top: 75%; left: 60%; transform: rotate(10deg);" />
+    <img src="./assets/logos/itk-snap-logo.png" class="absolute h-12 object-contain bg-white rounded p-1" style="top: 75%; left: 40%; transform: rotate(10deg);" />
     <img src="./assets/logos/spinal-cord-toolbox-logo.png" class="absolute h-10 object-contain bg-black rounded p-1 ring-4 ring-white" style="top: 85%; left: 25%; transform: rotate(-15deg);" />
   </div>
 
-  <div class="text-center px-4">
-    <p class="text-lg leading-relaxed">Neurodesk uses <strong>software containers</strong> to make scientific software accessible.</p>
+  <div class="flex flex-col items-center px-4">
+    <img src="./assets/graphics/cover-hero.png" class="h-48 object-contain rounded-xl shadow-md" />
+    <svg viewBox="0 0 100 10" preserveAspectRatio="none" class="w-full" style="height: 24px; margin-top: 0; margin-bottom: -0.5rem;">
+      <path d="M 0 5 L 95 5 M 89 1 L 95 5 L 89 9" stroke="#5b7c4f" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round" />
+    </svg>
+    <p class="text-lg leading-relaxed text-center">Neurodesk uses <strong>software containers</strong> to make scientific software accessible.</p>
   </div>
 
+
   <div class="flex flex-col items-center bg-white rounded-xl p-4 text-black">
-    <img src="./assets/logos/neurodesk-logo.png" class="h-32 object-contain mb-3" />
-    <div class="grid grid-cols-3 gap-3 w-full border-t border-gray-200 pt-4">
-      <div class="flex items-center justify-center h-14"><img src="./assets/logos/mrtrix3-logo.jpeg" class="max-h-full max-w-full object-contain" /></div>
-      <div class="flex items-center justify-center h-14"><img src="./assets/logos/afni-logo.png" class="max-h-full max-w-full object-contain" /></div>
-      <div class="flex items-center justify-center h-14"><img src="./assets/logos/freesurfer-logo.png" class="max-h-full max-w-full object-contain" /></div>
-      <div class="flex items-center justify-center h-14"><img src="./assets/logos/fsl-logo.png" class="max-h-full max-w-full object-contain" /></div>
-      <div class="flex items-center justify-center h-14"><img src="./assets/logos/python-logo.png" class="max-h-full max-w-full object-contain" /></div>
-      <div class="flex items-center justify-center h-14"><img src="./assets/logos/julia-logo.png" class="max-h-full max-w-full object-contain" /></div>
-      <div class="flex items-center justify-center h-14"><img src="./assets/logos/mne-python-logo.png" class="max-h-full max-w-full object-contain" /></div>
-      <div class="flex items-center justify-center h-14"><img src="./assets/logos/itk-snap-logo.png" class="max-h-full max-w-full object-contain" /></div>
-      <div class="flex items-center justify-center h-14"><img src="./assets/logos/spinal-cord-toolbox-logo.png" class="max-h-full max-w-full object-contain bg-black rounded p-1" /></div>
+    <div class="grid grid-cols-4 gap-2 w-full">
+      <div class="flex items-center justify-center h-12"><img src="./assets/logos/mrtrix3-logo.jpeg" class="max-h-full max-w-full object-contain" /></div>
+      <div class="flex items-center justify-center h-12"><img src="./assets/logos/afni-logo.png" class="max-h-full max-w-full object-contain" /></div>
+      <div class="flex items-center justify-center h-12"><img src="./assets/logos/freesurfer-logo.png" class="max-h-full max-w-full object-contain" /></div>
+      <div class="flex items-center justify-center h-12"><img src="./assets/logos/fsl-logo.png" class="max-h-full max-w-full object-contain" /></div>
+      <div class="flex items-center justify-center h-12"><img src="./assets/logos/python-logo.png" class="max-h-full max-w-full object-contain" /></div>
+      <div class="flex items-center justify-center h-12"><img src="./assets/logos/julia-logo.png" class="max-h-full max-w-full object-contain" /></div>
+      <div class="flex items-center justify-center h-12"><img src="./assets/logos/r-project-logo.png" class="max-h-full max-w-full object-contain" /></div>
+      <div class="flex items-center justify-center h-12"><img src="./assets/logos/rstudio-logo.png" class="max-h-full max-w-full object-contain" /></div>
+      <div class="flex items-center justify-center h-12"><img src="./assets/logos/mne-python-logo.png" class="max-h-full max-w-full object-contain" /></div>
+      <div class="flex items-center justify-center h-12"><img src="./assets/logos/itk-snap-logo.png" class="max-h-full max-w-full object-contain" /></div>
+      <div class="flex items-center justify-center h-12"><img src="./assets/logos/fieldtrip-logo.png" class="max-h-full max-w-full object-contain" /></div>
+      <div class="flex items-center justify-center h-12"><img src="./assets/logos/spinal-cord-toolbox-logo.png" class="max-h-full max-w-full object-contain bg-black rounded p-1" /></div>
+      <div class="flex items-center justify-center h-12"><img src="./assets/logos/nextflow-logo.png" class="max-h-full max-w-full object-contain" /></div>
+      <div class="flex items-center justify-center h-12"><img src="./assets/logos/datalad-logo.png" class="max-h-full max-w-full object-contain" /></div>
+      <div class="flex items-center justify-center h-12"><img src="./assets/logos/bids-brain-imaging-data-structure-logo.png" class="max-h-full max-w-full object-contain" /></div>
+      <div class="flex items-center justify-center h-12"><img src="./assets/logos/brainlife-logo.png" class="max-h-full max-w-full object-contain" /></div>
+      <div class="flex items-center justify-center h-12"><img src="./assets/logos/openneuro-logo.png" class="max-h-full max-w-full object-contain" /></div>
+      <div class="flex items-center justify-center h-12"><img src="./assets/logos/alphafold-logo.png" class="max-h-full max-w-full object-contain" /></div>
+      <div class="flex items-center justify-center h-12"><img src="./assets/logos/bioimage-archive-logo.jpeg" class="max-h-full max-w-full object-contain" /></div>
+      <div class="flex items-center justify-center h-12"><img src="./assets/logos/clowder-logo.png" class="max-h-full max-w-full object-contain" /></div>
     </div>
   </div>
 
@@ -329,7 +347,27 @@ The University of Queensland · National Imaging Facility
 """,
     ("sydney", 39): """# Bringing cutting-edge techniques to MRI scanners
 """,
-    ("sydney", 43): "<!-- full-image hero -->",
+    ("sydney", 43): """# Enable various collaboration models
+
+<hr class="border-t border-gray-200 my-4" />
+
+<div class="grid grid-cols-2 divide-x divide-gray-200" style="height: 400px;">
+  <figure class="flex flex-col items-center m-0">
+    <figcaption class="mb-2 font-semibold text-2xl">Centralised collaboration</figcaption>
+    <div class="flex-1 flex items-center justify-center w-full min-h-0">
+      <img src="./assets/diagrams/centralised-collaboration.svg" class="max-h-full max-w-full object-contain" />
+    </div>
+  </figure>
+  <figure class="flex flex-col items-center m-0">
+    <figcaption class="mb-2 font-semibold text-2xl">Decentralised collaboration</figcaption>
+    <div class="flex-1 flex items-center justify-center w-full min-h-0">
+      <img src="./assets/diagrams/decentralised-collaboration.svg" class="max-h-full max-w-full object-contain" />
+    </div>
+  </figure>
+</div>
+
+<p class="text-xs opacity-50 mt-4 text-right">Dao et al., 2025</p>
+""",
     ("sydney", 44): "<!-- full-image hero -->",
     ("sydney", 41): """# Summary
 
@@ -380,14 +418,7 @@ The University of Queensland · National Imaging Facility
 - **Notebook Intelligence** — notebook coding agent
 - **Sandboxed** in the Neurodesk container
 """,
-    ("sydney", 34): """# NeurodeskEDU
-
-<p class="absolute top-12 right-12 text-base opacity-70">🔗 neurodesk.org/edu</p>
-
-<div class="flex items-center justify-center mt-4" style="height: 420px;">
-  <img src="./assets/screenshots/neurodesk-edu.png" class="max-h-full max-w-full object-contain" />
-</div>
-""",
+    ("sydney", 34): "<!-- full-image via layout -->",
     ("sydney", 31): """# Cloud servers
 
 <div class="flex gap-4 mt-4 items-center" style="height: 380px;">
@@ -404,7 +435,7 @@ The University of Queensland · National Imaging Facility
   </div>
 </div>
 
-<img src="./assets/diagrams/cloud-servers-corner.png" class="absolute top-4 right-4 h-24 object-contain !opacity-90" />
+<img src="./assets/graphics/platforms.svg" class="absolute top-4 right-4 h-24 object-contain !opacity-90" />
 """,
     ("sydney", 30): """# User Interface to include new tools
 
@@ -476,9 +507,11 @@ The University of Queensland · National Imaging Facility
   <img src="./assets/logos/spinal-cord-toolbox-logo.png" class="absolute h-10 object-contain bg-black rounded p-1 ring-4 ring-white" style="top: 12%; left: 88%; transform: rotate(-15deg);" />
 </div>
 
+<hr class="border-t border-gray-200 my-4" />
+
 <IconRow>
   <IconCell caption="… on your notebook?"><mdi-laptop /></IconCell>
-  <IconCell caption="… on your lab workstation?"><mdi-desktop-tower-monitor /></IconCell>
+  <IconCell caption="… on your lab workstation?" size="text-7xl"><mdi-desktop-tower-monitor /></IconCell>
   <IconCell caption="… on a secure environment?"><mdi-lock /></IconCell>
   <IconCell caption="… on a cloud provider?"><mdi-cloud /></IconCell>
   <IconCell caption="… on a high performance cluster?"><mdi-server /></IconCell>
@@ -674,38 +707,50 @@ def main():
 
 # Support and acknowledgements
 
-<div class="grid grid-cols-3 gap-6 mt-8">
+<div class="grid grid-cols-2 gap-6 mt-8">
 
-  <div class="bg-gray-100 rounded-xl p-5">
-    <h3 class="m-0 mb-3 font-semibold">Grant Funding</h3>
-    <ul class="m-0 p-0 list-none space-y-2 text-sm">
-      <li>• NIF co-investment (1M AUD)</li>
-      <li>• ARDC platform grant 2020–2023 (650k AUD)</li>
-      <li>• EOSS6 2024–2026 (600k AUD)</li>
-      <li>• UQ Global Development (8k AUD)</li>
-    </ul>
+  <div class="bg-gray-100 text-gray-900 rounded-xl p-4">
+    <div class="mb-2 font-semibold uppercase tracking-wider opacity-80" style="font-size: 13px;">Grants &amp; Funding</div>
+    <table class="w-full text-xs" style="border-collapse: collapse;">
+      <tbody>
+        <tr><td class="font-medium py-0">NIF FDRI co-investment</td><td class="opacity-70 whitespace-nowrap py-0 px-3">1M AUD</td><td class="opacity-70 whitespace-nowrap py-0 text-right">2025–</td></tr>
+        <tr><td class="font-medium py-0">ARDC VRE co-investment</td><td class="opacity-70 whitespace-nowrap py-0 px-3">550k AUD</td><td class="opacity-70 whitespace-nowrap py-0 text-right">2026–</td></tr>
+        <tr><td class="font-medium py-0">ARDC platform grant</td><td class="opacity-70 whitespace-nowrap py-0 px-3">650k AUD</td><td class="opacity-70 whitespace-nowrap py-0 text-right">2020–2023</td></tr>
+        <tr><td class="font-medium py-0">CZI EOSS6 &amp; Wellcome Trust</td><td class="opacity-70 whitespace-nowrap py-0 px-3">600k AUD</td><td class="opacity-70 whitespace-nowrap py-0 text-right">2024–</td></tr>
+        <tr><td class="font-medium py-0">UQ Global Development</td><td class="opacity-70 whitespace-nowrap py-0 px-3">8k AUD</td><td class="opacity-70 whitespace-nowrap py-0 text-right">2024</td></tr>
+      </tbody>
+    </table>
   </div>
 
-  <div class="bg-gray-100 rounded-xl p-5">
-    <h3 class="m-0 mb-3 font-semibold">Community</h3>
-    <ul class="m-0 p-0 list-none space-y-2 text-sm">
-      <li>• &gt; 10 active contributors</li>
-      <li>• CVMFS hosting via Open Science Grid, EGI, JetStream2</li>
-    </ul>
+  <div class="bg-gray-100 text-gray-900 rounded-xl p-4">
+    <div class="mb-2 font-semibold uppercase tracking-wider opacity-80" style="font-size: 13px;">Cloud providers</div>
+    <table class="w-full text-xs" style="border-collapse: collapse;">
+      <tbody>
+        <tr><td class="font-medium py-0">ARDC Nectar Research Cloud</td><td class="opacity-70 whitespace-nowrap py-0 text-right">2021–</td></tr>
+        <tr><td class="font-medium py-0">AWS</td><td class="opacity-70 whitespace-nowrap py-0 text-right">2024–</td></tr>
+        <tr><td class="font-medium py-0">EGI Federation</td><td class="opacity-70 whitespace-nowrap py-0 text-right">2024–</td></tr>
+        <tr><td class="font-medium py-0">Google Cloud</td><td class="opacity-70 whitespace-nowrap py-0 text-right">2023–2025</td></tr>
+        <tr><td class="font-medium py-0">JetStream2</td><td class="opacity-70 whitespace-nowrap py-0 text-right">2023–</td></tr>
+        <tr><td class="font-medium py-0">Oracle Cloud</td><td class="opacity-70 whitespace-nowrap py-0 text-right">2021–2023</td></tr>
+        <tr><td class="font-medium py-0">Open Science Grid</td><td class="opacity-70 whitespace-nowrap py-0 text-right">2024–</td></tr>
+      </tbody>
+    </table>
   </div>
 
-  <div class="bg-gray-100 rounded-xl p-5">
-    <h3 class="m-0 mb-3 font-semibold">Cloud providers</h3>
-    <ul class="m-0 p-0 list-none space-y-2 text-sm">
-      <li>• ARDC Nectar Cloud (2021–)</li>
-      <li>• AWS (2024–)</li>
-      <li>• EGI (2024–)</li>
-      <li>• Google Cloud (2023–)</li>
-      <li>• JetStream2 (2023–)</li>
-      <li>• Oracle Cloud (2021–2023)</li>
-    </ul>
-  </div>
+</div>
 
+<div class="absolute left-1/2 -translate-x-1/2 flex flex-nowrap items-center justify-center gap-3 px-4 py-2 bg-white border border-gray-200 shadow-sm" style="bottom: 0; border-bottom: none; border-radius: 12px 12px 0 0; max-width: calc(100% - 2rem);">
+  <img src="./assets/logos/nif-logo.svg" class="h-6 max-w-[80px] object-contain" />
+  <img src="./assets/logos/uq-logo.svg" class="h-6 max-w-[80px] object-contain" />
+  <img src="./assets/logos/ardc-logo.png" class="h-6 max-w-[80px] object-contain" />
+  <img src="./assets/logos/wellcome-logo.png" class="h-9 max-w-[100px] object-contain" />
+  <img src="./assets/logos/ardc-nectar-research-cloud-logo.png" class="h-6 max-w-[80px] object-contain" />
+  <img src="./assets/logos/aws-logo.png" class="h-6 max-w-[80px] object-contain" />
+  <img src="./assets/logos/egi-logo.png" class="h-6 max-w-[80px] object-contain" />
+  <img src="./assets/logos/google-cloud-logo.png" class="h-9 max-w-[100px] object-contain" />
+  <img src="./assets/logos/jetstream2-logo.png" class="h-6 max-w-[80px] object-contain" />
+  <img src="./assets/logos/oracle-cloud-infrastructure-logo.jpeg" class="h-6 max-w-[80px] object-contain" />
+  <img src="./assets/logos/open-science-grid-logo.png" class="h-6 max-w-[80px] object-contain" />
 </div>
 """,
         ("sydney", 15): """---
@@ -715,6 +760,25 @@ image: ./assets/diagrams/neurodesk-ecosystem-architecture.png
 ---
 
 <!-- recap: full architecture (after crops) -->
+""",
+        ("sydney", 32): """---
+logos:
+  - ./assets/logos/cernvm-file-system-logo.png
+  - ./assets/logos/ardc-nectar-research-cloud-logo.png
+  - ./assets/logos/egi-logo.png
+  - ./assets/logos/jetstream2-logo.png
+  - ./assets/logos/open-science-grid-logo.png
+---
+
+# Software distribution using CVMFS
+
+<p class="text-sm opacity-70 mt-2">CVMFS delivers and caches &gt;500GB of software containers for on-demand access</p>
+
+<p class="absolute top-12 right-12 text-xs opacity-50">🔗 neurodesk.org/developers/cvmfs/</p>
+
+<div class="flex items-center justify-center mt-8" style="height: 380px;">
+  <img src="./assets/diagrams/cvmfs-stratum-replication-architecture.png" class="max-h-full max-w-full object-contain" />
+</div>
 """,
         ("sydney", 35): """---
 layout: full-video
@@ -745,6 +809,26 @@ credit: "image credit: Jonathan Goodwin"
 ---
 
 # Deep learning-based prostate fiducial marker detection
+""",
+        ("sydney", 44): """---
+layout: image-top-cover
+image: ./assets/graphics/sugarglider-photo.jpg
+---
+
+# Sciget
+
+Making Scientific Software Accessible
+""",
+        ("sydney", 16): """---
+layout: image-right-crop
+image: ./assets/graphics/ais-cover-hero.png
+logos:
+  - ./assets/logos/ais-logo.png
+  - ./assets/logos/nif-logo.svg
+  - ./assets/logos/ncris-national-research-infrastructure-logo.png
+---
+
+# Australian Imaging Service
 """,
         ("sydney", 39): """---
 logos:

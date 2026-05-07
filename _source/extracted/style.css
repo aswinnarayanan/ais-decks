@@ -2,7 +2,7 @@
 
 :root {
   --c-primary: #121212;
-  --c-body: #444444;
+  --c-body: #1a1a1a;
   --c-heading: #040404;
   --c-muted: #717171;
   --c-bg: #FFFFFF;
@@ -12,9 +12,9 @@
 
 .dark {
   --c-primary: #FFFFFF;
-  --c-body: #B4AFB6;
+  --c-body: #f0f0f0;
   --c-heading: #FFFFFF;
-  --c-muted: #888888;
+  --c-muted: #aaaaaa;
   --c-bg: #1C1C1C;
   --c-border: #3E3E3E;
   --c-surface: #222222;
@@ -31,23 +31,23 @@
   --bottom-reserved: 72px;
 }
 
-/* Headings — Manrope 700, tight tracking & line-height */
+/* Headings — Manrope 500 (medium), tight tracking & line-height */
 .slidev-layout h1,
 .slidev-layout h2,
 .slidev-layout h3,
 .slidev-layout h4 {
   font-family: 'Manrope', sans-serif;
-  font-weight: 700;
+  font-weight: 500;
   line-height: 1.2;
-  letter-spacing: -0.01em;
+  letter-spacing: -0.02em;
   color: var(--c-heading);
 }
 
-/* Section subtitles / kickers — Manrope 600 */
+/* Section subtitles / kickers — Manrope 400 (regular) */
 .slidev-layout h5,
 .slidev-layout h6 {
   font-family: 'Manrope', sans-serif;
-  font-weight: 600;
+  font-weight: 400;
   line-height: 1.25;
   color: var(--c-heading);
 }

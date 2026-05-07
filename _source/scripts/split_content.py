@@ -61,7 +61,7 @@ MAPPING = {
     ("sydney", 42): "_skip",                      # removed (image moved to sydney 44)
     ("sydney", 43): "ais/collaboration-models.md",
     ("sydney", 44): "ais/open-data-workflow.md",
-    ("sydney", 45): "motivation/need-for-fair.md", # FAIR citation
+    ("sydney", 45): "_skip",                      # removed (FAIR citation)
     ("sydney", 46): "_skip",                      # roadmap divider
     ("sydney", 47): "_skip",                      # removed
     ("sydney", 48): "_skip",                      # moved earlier via INSERT_AFTER
@@ -70,47 +70,47 @@ MAPPING = {
     # === Sciget (58 slides) ===
     ("sciget", 1):  "_skip",                      # cover (will rebuild)
     ("sciget", 2):  "_skip",                      # roadmap divider
-    ("sciget", 3):  "motivation/need-for-fair.md",
+    ("sciget", 3):  "_skip",                       # removed (FAIR)
     ("sciget", 4):  "motivation/challenges-in-analysis.md",
     ("sciget", 5):  "motivation/finding-sharing-workflows.md",
-    ("sciget", 6):  "motivation/installing-software-pain.md",
+    ("sciget", 6):  "_skip",                       # removed (duplicate of sydney 7)
     ("sciget", 7):  "_skip",                      # roadmap divider
     ("sciget", 8):  "support-acknowledgements.md", # contributors
     ("sciget", 9):  "neurodesk/what-is-neurodesk.md",
     ("sciget", 10): "_skip",                      # section nav transition
-    ("sciget", 11): "neurodesk/reproducible-workflows.md",
-    ("sciget", 12): "neurodesk/portable-infrastructure.md",
+    ("sciget", 11): "_skip",                       # removed
+    ("sciget", 12): "_skip",                       # removed (covered earlier)
     ("sciget", 13): "_skip",                      # section nav
     ("sciget", 14): "_skip",                      # section nav
     ("sciget", 15): "_skip",                      # section nav
-    ("sciget", 16): "ais/collaboration-models.md",
-    ("sciget", 17): "neurodesk/uptake-community.md",
+    ("sciget", 16): "_skip",                       # removed (covered earlier)
+    ("sciget", 17): "_skip",                       # removed (covered earlier)
     ("sciget", 18): "_skip",                      # roadmap divider
-    ("sciget", 19): "ais/community-workshops.md",  # NIF workshop announcement
-    ("sciget", 20): "ais/what-is-ais.md",          # AIS goals
-    ("sciget", 21): "ais/community-workshops.md",  # workshop announcement variant
-    ("sciget", 22): "ais/what-is-ais.md",          # "What is AIS?" content
-    ("sciget", 23): "ais/architecture.md",         # AIS platform diagram
-    ("sciget", 24): "sciget/from-neurodesk-to-sciget.md",
-    ("sciget", 25): "sciget/communities.md",
-    ("sciget", 26): "neurodesk/ui-new-tools.md",
-    ("sciget", 27): "sciget/github-actions-build.md",
-    ("sciget", 28): "neurodesk/cloud-servers.md",
+    ("sciget", 19): "_skip",                       # removed (covered earlier)
+    ("sciget", 20): "_skip",                       # duplicate of sydney 19
+    ("sciget", 21): "_skip",                       # duplicate workshop
+    ("sciget", 22): "_skip",                       # untitled empty placeholder
+    ("sciget", 23): "_skip",                       # duplicate of sydney 20 architecture
+    ("sciget", 24): "_skip",                       # removed (covered earlier)
+    ("sciget", 25): "_skip",                       # removed (covered earlier)
+    ("sciget", 26): "_skip",                       # removed (covered earlier)
+    ("sciget", 27): "_skip",                       # removed (covered earlier)
+    ("sciget", 28): "_skip",                       # removed (covered earlier)
     ("sciget", 29): "neurodesk/virtual-desktops.md",
-    ("sciget", 30): "sciget/cvmfs-distribution.md",
+    ("sciget", 30): "_skip",                       # moved via INSERT_AFTER sydney 32
     ("sciget", 31): "neurodesk/computational-notebooks.md",
     ("sciget", 32): "ais/collaboration-models.md",
-    ("sciget", 33): "motivation/need-for-fair.md", # FAIR citation
-    ("sciget", 34): "_skip",                      # roadmap divider
-    ("sciget", 35): "sciget/xnat-deployment.md",
-    ("sciget", 36): "sciget/xnat-deployment.md",
-    ("sciget", 37): "sciget/xnat-deployment.md",
-    ("sciget", 38): "sciget/xnat-deployment.md",
-    ("sciget", 39): "sciget/xnat-deployment.md",
-    ("sciget", 40): "sciget/xnat-deployment.md",
-    ("sciget", 41): "sciget/xnat-deployment.md",
-    ("sciget", 42): "sciget/xnat-deployment.md",
-    ("sciget", 43): "sciget/xnat-deployment.md",
+    ("sciget", 33): "_skip",                       # removed
+    ("sciget", 34): "_skip",                       # roadmap divider
+    ("sciget", 35): "_skip",                       # removed (XNAT deployment series)
+    ("sciget", 36): "_skip",                       # removed
+    ("sciget", 37): "_skip",                       # removed
+    ("sciget", 38): "_skip",                       # removed
+    ("sciget", 39): "_skip",                       # removed
+    ("sciget", 40): "_skip",                       # removed
+    ("sciget", 41): "_skip",                       # removed
+    ("sciget", 42): "_skip",                       # removed
+    ("sciget", 43): "_skip",                       # removed
     ("sciget", 44): "_skip",                      # roadmap divider
     ("sciget", 45): "sciget/communities.md",       # ecosystem collage
     ("sciget", 46): "sciget/communities.md",       # ecosystem collage (extended)

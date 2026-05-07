@@ -65,10 +65,6 @@ National Imaging Facility
 3
 
 
-![](./assets/logos/ais-logo.png)
-
-![](./assets/logos/neurodesk-horizontal.png)
-
 ![](./assets/logos/nif-logo.svg)
 
 ![](./assets/logos/uq-logo.svg)
