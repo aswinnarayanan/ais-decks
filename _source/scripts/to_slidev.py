@@ -380,13 +380,13 @@ Aswin Narayanan
   <figure class="flex flex-col items-center m-0">
     <figcaption class="mb-2 font-semibold text-2xl">Centralised collaboration</figcaption>
     <div class="flex-1 flex items-center justify-center w-full min-h-0">
-      <img src="./assets/diagrams/centralised-collaboration.svg" class="max-h-full max-w-full object-contain" />
+      <img src="./assets/diagrams/centralised-collaboration.png" class="max-h-full max-w-full object-contain" />
     </div>
   </figure>
   <figure class="flex flex-col items-center m-0">
     <figcaption class="mb-2 font-semibold text-2xl">Decentralised collaboration</figcaption>
     <div class="flex-1 flex items-center justify-center w-full min-h-0">
-      <img src="./assets/diagrams/decentralised-collaboration.svg" class="max-h-full max-w-full object-contain" />
+      <img src="./assets/diagrams/decentralised-collaboration.png" class="max-h-full max-w-full object-contain" />
     </div>
   </figure>
 </div>
